@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button tests</title>
+    <style>
+        body{
+            background-color: rgb(70, 55, 73);
+        }
+        .button{
+            padding: 15px 35px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            margin-right: 20px;
+            padding: 15px 50px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .button1 {
+            color: rgb(219, 219, 219); background-color: rgba(30, 30, 30, 30);
+        }
+
+        .button1:hover{
+            color: rgb(255, 255, 255);
+            background-color: rgb(27, 27, 27);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .button2:hover{
+            color: rgb(30,30,30,30);
+            background-color: rgb(240, 240, 240);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+        }
+
+        .button2 { 
+            color: rgb(30, 30, 30, 30); background-color: rgb(255, 255, 255);
+        }
+
+        .myDiv{
+            text-align: center;
+            font-size: 30px;
+            margin-right: 20px;
+            color: rgb(44, 34, 46);
+            
+        }
+
+        .centerDiv{
+            text-align: center;
+            padding: 300px;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="myDiv">
+        <h1>Button</h1>
+    </div>
+    <div class="centerDiv">
+        <button class="button button1"onclick="gerarTexto()">Black</button>
+        <button class="button button2" onclick="document.getElementById('demo').innerHTML = Math.floor(Math.random() * 100)">White</button>
+    </div>
+
+    <div class="myDiv">
+        <h1 id="demo"></h1>
+    </div>
+    <script>
+        function gerarTexto() {
+            let textos = [
+            "Quantos reais você vai ganhar hoje?",
+            "Quantos passos serão dados nesta rua hoje?",
+            "Quantos carros vão passar por aqui agora?",
+            "Quantos minutos faltam para o próximo intervalo?",
+            "Quantos pedidos esse restaurante fará hoje?",
+            "Quantos visitantes um site terá hoje?",
+            "Quantos produtos serão vendidos nesta loja hoje?",
+            "Quantos ônibus vão parar neste ponto hoje?",
+            "Quantos aviões vão decolar deste aeroporto hoje?",
+            "Quantas transações serão feitas neste caixa eletrônico hoje?",
+            "Quantos litros de água vão ser consumidos nesta casa hoje?",
+            "Quantos emails serão enviados neste escritório hoje?",
+            "Quantas ligações serão atendidas nesta central hoje?",
+            "Quantos elevadores estão em funcionamento neste prédio?",
+            "Quantos quilos de alimentos serão vendidos neste mercado hoje?",
+            "Quantos pacotes serão entregues pelos correios hoje?",
+            "Quantas pessoas vão atravessar esta rua hoje?",
+            "Quantas luzes estão acesas neste momento na cidade?",
+            "Quantos pássaros estão voando sobre esta região agora?",
+            "Quantos caminhões passarão por esta rodovia hoje?",
+            "Quantos quilômetros um táxi rodará nesta cidade hoje?",
+            "Quantas portas serão abertas e fechadas neste prédio hoje?",
+            "Quantas mensagens de texto serão enviadas no mundo agora?",
+            "Quantas estrelas são visíveis no céu nesta noite?",
+            "Quantos pedidos de comida serão feitos por delivery agora?",
+            "Quantos copos de café serão consumidos neste escritório hoje?",
+            "Quantos alarmes tocaram nesta cidade esta manhã?",
+            "Quantos assentos estão ocupados neste ônibus agora?",
+            "Quantos segundos faltam para a próxima hora cheia?",
+            "Quantos computadores estão ligados nesta empresa agora?",
+            "Quantos alunos responderam à chamada na escola hoje?",
+            "Quantas moedas estão circulando neste momento no país?",
+            "Quantos litros de gasolina foram consumidos nesta cidade hoje?",
+            "Quantos itens estão na prateleira deste supermercado agora?",
+            "Quantos cliques este site recebeu até agora?",
+            "Quantos ingressos de cinema foram vendidos hoje?",
+            "Quantos segundos se passaram desde o início do dia?",
+            "Quantos carros estão estacionados neste shopping agora?",
+            "Quantas lâmpadas foram trocadas neste prédio este mês?",
+            "Quantos aviões pousaram neste aeroporto nas últimas 24 horas?",
+            "Quantas portas foram abertas e fechadas neste metrô hoje?",
+            "Quantos litros de leite foram vendidos neste mercado hoje?",
+            "Quantas senhas foram digitadas erradas hoje?",
+            "Quantos elevadores estão em manutenção neste momento?",
+            "Quantas reservas foram feitas neste hotel esta semana?",
+            "Quantos clientes entraram nesta loja hoje?",
+            "Quantos contratos foram assinados nesta empresa este mês?",
+            "Quantas entregas este motoboy já fez hoje?",
+            "Quantos brindes foram distribuídos neste evento até agora?",
+            "Quantos livros foram emprestados nesta biblioteca hoje?",
+            "Quantas chamadas de emergência foram feitas hoje?",
+            "Quantas janelas foram abertas e fechadas neste prédio hoje?",
+            "Quantos litros de refrigerante foram vendidos nesta lanchonete hoje?",
+            "Quantos fones de ouvido foram vendidos nesta loja online hoje?",
+            "Quantos pedidos foram cancelados neste restaurante hoje?",
+            "Quantos bilhetes de transporte público foram usados hoje?",
+            "Quantos fardos de papel foram gastos neste escritório esta semana?",
+            "Quantos segundos um semáforo fica vermelho nesta avenida?",
+            "Quantos ventiladores estão ligados nesta fábrica agora?",
+            "Quantos cartões de crédito foram aprovados neste banco hoje?",
+            "Quantos botões foram pressionados nos elevadores deste prédio hoje?",
+            "Quantas vezes esta porta foi aberta e fechada hoje?",
+            "Quantos celulares estão carregando neste momento neste prédio?",
+            "Quantos caixas eletrônicos estão em funcionamento agora?",
+            "Quantos pedidos de comida por aplicativo foram feitos hoje?",
+            "Quantos tíquetes de estacionamento foram emitidos neste shopping?",
+            "Quantos computadores estão conectados a esta rede Wi-Fi agora?",
+            "Quantos minutos este sinal de trânsito já ficou verde hoje?",
+            "Quantos clientes já passaram pelo caixa deste mercado hoje?",
+            "Quantos quilômetros um motorista de aplicativo dirigiu hoje?",
+            "Quantos sorvetes foram vendidos nesta sorveteria hoje?",
+            "Quantos litros de água foram usados neste parque aquático hoje?",
+            "Quantos funcionários bateram o ponto neste horário?",
+            "Quantos comandos de voz foram reconhecidos por esta assistente virtual hoje?",
+            "Quantos carros estão na fila do drive-thru agora?",
+            "Quantos assentos estão vagos neste cinema agora?",
+            "Quantos grampos foram usados neste escritório hoje?",
+            "Quantos copos descartáveis foram jogados fora nesta cafeteria hoje?",
+            "Quantas contas foram pagas neste banco hoje?",
+            "Quantos arquivos foram baixados nesta empresa hoje?",
+            "Quantas assinaturas digitais foram feitas nesta plataforma hoje?",
+            "Quantos metros de fio foram usados na instalação elétrica deste prédio?",
+            "Quantos alunos faltaram à aula nesta escola hoje?",
+            "Quantas sacolas plásticas foram usadas neste supermercado hoje?",
+            "Quantos brinquedos foram vendidos nesta loja hoje?",
+            "Quantas reservas de passagem foram feitas nesta companhia aérea hoje?",
+            "Quantos fones Bluetooth foram conectados a este dispositivo hoje?",
+            "Quantos pratos de comida foram servidos neste restaurante hoje?",
+            "Quantos recibos foram impressos nesta loja hoje?",
+            "Quantos aparelhos eletrônicos foram vendidos nesta loja de tecnologia hoje?",
+            "Quantas senhas de Wi-Fi foram solicitadas neste café hoje?",
+            "Quantas fotos foram tiradas neste museu hoje?",
+            "Quantas câmeras de segurança estão ligadas neste momento neste shopping?",
+            "Quantos passageiros viajaram de trem nesta estação hoje?",
+            "Quantos tickets de suporte foram abertos nesta empresa hoje?",
+            "Quantos litros de combustível foram abastecidos neste posto hoje?",
+            "Quantos anúncios publicitários foram exibidos neste site hoje?",
+            "Quantos pneus foram trocados nesta oficina hoje?",
+            "Quantos brindes foram distribuídos nesta feira hoje?",
+            "Quantos mililitros de perfume foram borrifados nesta loja hoje?"
+            ];
+            
+            let indice = Math.floor(Math.random() * textos.length);
+            document.getElementById('demo').innerHTML = textos[indice];
+        }
+    </script>
+</body>
+</html>
